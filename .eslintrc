@@ -1,0 +1,12 @@
+{
+  "plugins": ["effector"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "plugin:effector/recommended",
+    "plugin:effector/scope",
+    "plugin:effector/react",
+    "plugin:effector/future"
+  ]
+}
