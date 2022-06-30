@@ -1,7 +1,8 @@
 import { createHistoryRouter } from 'atomic-router';
 import { createBrowserHistory } from 'history';
 
-import { productsModel } from '@pages/products';
+import { productsListModel } from '@pages/products-list';
+import { productsSingleModel } from '@pages/products-single';
 
 // import { HomePage } from '../pages/home';
 // import { PostsList } from '../pages/posts-list';
@@ -9,8 +10,8 @@ import { productsModel } from '@pages/products';
 // import { NotFound } from '../pages/not-found';
 
 export const routes = [
-  { path: '/', route: productsModel.route },
-  // { path: '/posts', route: PostsList.route },
+  { path: '/products', route: productsListModel.route },
+  { path: '/products/:id', route: productsSingleModel.route },
   // { path: '/posts/:slug', route: PostsSingle.route },
   // { path: '/404', route: NotFound.route },
 ];

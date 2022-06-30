@@ -1,21 +1,19 @@
 import * as React from 'react';
-import { Route, RouterProvider } from 'atomic-router-react';
-import { productsModel, Products } from '@pages/products';
+import { Link, Route, RouterProvider } from 'atomic-router-react';
 
-// import { HomePage } from '../pages/home';
-// import { PostsList } from '../pages/posts-list';
-// import { PostsSingle } from '../pages/posts-single';
-// import { NotFound } from '../pages/not-found';
+import { productsListModel, ProductsList } from '@pages/products-list';
+import { ProductsSingle, productsSingleModel } from '@pages/products-single';
 
 import { router } from './routing';
 
 export const App = () => {
   return (
     <RouterProvider router={router}>
-      <Route route={productsModel.route} view={Products} />
-      {/* <Route route={PostsList.route} view={PostsList.Page} /> */}
-      {/* <Route route={PostsSingle.route} view={PostsSingle.Page} /> */}
-      {/* <Route route={NotFound.route} view={NotFound.Page} /> */}
+      <Link to={productsSingleModel.route} params={{ id: '2' }}>
+        LInaakldfjlksdjfklsjl
+      </Link>
+      <Route route={productsListModel.route} view={ProductsList} />
+      <Route route={productsSingleModel.route} view={ProductsSingle} />
     </RouterProvider>
   );
 };
