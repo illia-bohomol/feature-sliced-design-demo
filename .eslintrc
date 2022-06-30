@@ -1,12 +1,15 @@
 {
-  "plugins": ["effector"],
+  "root": true,
+  "plugins": ["effector", "import"],
   "extends": [
-    "airbnb",
-    "airbnb-typescript",
-    "plugin:prettier/recommended",
     "plugin:effector/recommended",
     "plugin:effector/scope",
     "plugin:effector/react",
-    "plugin:effector/future"
-  ]
+    "plugin:effector/future",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] }
 }
